@@ -1,0 +1,24 @@
+@import '../logo/logo.scss';
+
+@media (max-width: 45em) {
+    .main{
+        .sidebar{
+            padding: 40px 10px 0;
+
+            .logobox{
+                @include logo(4px, white, 16px);
+                margin-bottom: 40px;
+            }
+
+            .icon{
+                font-size: 16px;
+
+                .pointer{
+                    width: 30px;
+                    top: -10px;
+                    right: -20px;
+                }
+            }
+        }
+    }
+}

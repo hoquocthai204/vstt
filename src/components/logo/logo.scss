@@ -1,0 +1,50 @@
+$width-box: 110px;
+// $width-node: 6px;
+// $background: #CE4E27;
+// $maxheight: 70px;
+@mixin center_align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin logo ($width-node, $background, $testsize:0){
+    position: relative;
+    width: calc($width-node*11);
+    margin: 10px auto;
+    & .voicebox{
+        @include center_align()
+    }
+    & .elip{
+        background-color: $background;
+        border-radius: 50%;
+        display: inline-block;
+        &._1{
+            width: $width-node;
+            height: calc(($width-node*10)/10);
+        }
+        &._2{
+            width: $width-node;
+            height: calc(($width-node*10)*(4/7));
+        }
+        &._3{
+            width: $width-node;
+            height: calc(($width-node*10)*(6/7));
+        }
+        &._4{
+            width: $width-node;
+            height: ($width-node*10);
+        }
+        &+.elip{
+            margin-left: $width-node;
+        }
+    }
+    & .vstt h2{
+        font-family: cursive;
+        color: $background;
+        font-weight: bolder;
+        @if $testsize!=0 {
+            font-size: $testsize;
+        }
+    }
+}

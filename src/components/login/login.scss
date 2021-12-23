@@ -1,0 +1,119 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+#main{
+    display: flex;
+    height: 100vh;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import '../logo/logo.scss';
+
+.leftside{
+    min-width: 50%;
+    display: inline-block;
+    text-align: center;
+    float: left;
+    padding: 0 175px;
+
+    & .form p{
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 18.75px;
+        margin-bottom: 9px;
+        margin-top: 28px;
+    }
+    
+    & .form input{
+        width: 100%;   
+        border: 1.5px solid #FF7506;
+        border-radius: 5px;
+        padding: 11px 0 11px 60px;
+    }
+
+    & .form button{
+        width: 100%;
+        margin-top: 22px;
+        padding: 12px 0;
+        border-radius: 5px;
+        background: #FF7506;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-family: Roboto;
+    }
+    & .form a{
+        color: #FF7506;
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    & .form div + div{
+        margin-top: 22px;
+    }
+
+    & .header{
+        padding: 120px 0 60px;
+    }
+
+    & .logobox{
+        @include logo(6px, #CE4E27)
+    }
+    & .inputbox{
+        position: relative;
+        & .fa-user,
+        & .fa-lock{
+            position: absolute;
+            color: #A1C1D7;
+            font-size: 16px;
+            top: 11px;
+            left: 29px;
+        }
+        & .fa-eye{
+            position: absolute;
+            color: #A1C1D7;
+            font-size: 16px;
+            top: 11px;
+            right: 12px;
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.rightside{
+    width: 50%;
+    display: inline-block;
+    background-color: #EB672B;
+    padding-top: 100px;
+    & .logobox{
+        @include logo(9px, white, 32px)
+    }
+    color: white;
+    & p{
+        font-size: calc(32px*2/3);
+    }
+}
+
+
+@media (max-width: 64em) {
+    #main{
+        display: block;
+        min-width: 40em;
+        & .rightside{
+            display: none;
+        }
+
+        & .leftside{
+            width: 100%;
+            & .header{
+                padding: 60px 0 40px;
+            }
+        }
+    }
+}
+
