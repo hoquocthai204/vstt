@@ -1,0 +1,176 @@
+@keyframes speechOut {
+    from {
+        top: 100%;
+        left: 100%;
+        opacity: 0;
+        transform: scale(0.2);
+    }
+}
+
+.speech_container {
+    display: none;
+    width: 50%;
+    height: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 1;
+    animation: speechOut 0.3s ease;
+    border-radius: 5px;
+    z-index: 2;
+
+    .header {
+        padding: 20px;
+        background-color: #ff7506;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .speech_body {
+        padding: 20px;
+
+        .subtitle {
+            position: relative;
+            text-align: left;
+
+            div {
+                display: inline-block;
+
+                p {
+                    display: inline-block;
+                }
+
+                &.date {
+                    margin-left: 5%;
+                    font-size: 12px;
+                    opacity: 0.5;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+
+                &.record {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                &.volume {
+                    position: absolute;
+                    right: 20%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #ff7506;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .options {
+            margin-top: 10px;
+            position: relative;
+
+            .mic_logo svg {
+                width: 90px;
+                height: 90px;
+                cursor: pointer;
+            }
+
+            .frequency_logo {
+                transform: scale(0.7);
+            }
+
+            .record_note {
+                font-size: 12px;
+
+                li {
+                    color: #ff7506;
+                    list-style-type: disc;
+                }
+
+                p {
+                    font-weight: 500;
+                }
+            }
+
+            .main_btn {
+                display: inline-flex;
+                width: 100%;
+                justify-content: center;
+                position: absolute;
+                left: 50%;
+                bottom: -10px;
+                transform: translateX(-50%);
+
+                button {
+                    border: none;
+                    box-shadow: 2px 4px 15px rgba(255, 176, 112, 0.5);
+                    background-color: #ffffff;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 20px;
+                        color: #ff7506;
+                    }
+
+                    &.play {
+                        display: none;
+                    }
+
+                    &.play i,
+                    &.pause i{
+                        font-size: 40px;
+                    }
+
+                    + button {
+                        margin-left: 7%;
+                    }
+                }
+            }
+        }
+
+        .content {
+            #record_text {
+                resize: none;
+                width: 95%;
+                height: 30vh;
+                padding: 5px 10px;
+                outline: 1px solid #ff7506;
+                border: none;
+                border-radius: 3px;
+                position: relative;
+                outline-offset: 5px;
+                margin-top: 30px;
+
+                &::-webkit-scrollbar-track {
+                    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    border-radius: 10px;
+                    background-color: #f5f5f5;
+                    margin-right: 10px;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                    background-color: #f5f5f5;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    background-color: #d0e0eb;
+                }
+            }
+        }
+    }
+}
