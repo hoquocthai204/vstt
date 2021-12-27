@@ -51,7 +51,6 @@ function ImportContent() {
 
                         <div className='itemoption'>
                             <button>Details</button>
-                            <button>Move to group</button>
                             <div className='removeitem'>
                                 <i className="fas fa-trash-alt"></i>
                             </div>

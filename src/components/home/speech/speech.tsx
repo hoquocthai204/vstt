@@ -207,7 +207,6 @@ function Speech() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum facilis quaerat aut ex quo obcaecati quos, voluptas perspiciatis autem asperiores laboriosam eaque, sapiente quod incidunt non nulla laborum hic adipisci.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptatem, ab temporibus perspiciatis ad maiores eligendi officiis odio sed ipsam et aut provident deserunt saepe impedit dicta voluptas consequuntur quam.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id consequatur vitae reiciendis, quibusdam enim, adipisci praesentium ab dolores blanditiis inventore cupiditate dignissimos officiis ea! Magni ipsum laudantium sapiente libero incidunt.
-
                     </textarea>
                 </div>
 
