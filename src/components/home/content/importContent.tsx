@@ -33,10 +33,8 @@ function ImportContent() {
                         <div>
                             <p className='conversation'>Imported Audio Name</p>
                         </div>
-                        {/* <div> */}
                         <p className='group'>Duration</p>
                         <p className='duration'>Status</p>
-                        {/* </div> */}
                         <div className='temp'></div>
                     </div>
 

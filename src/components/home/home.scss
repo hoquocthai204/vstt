@@ -249,6 +249,12 @@ $siderFlexSize: 6%;
                         transform: translateX(-50%);
                     }
 
+                    .removedDate {
+                        position: absolute;
+                        left: 35%;
+                        transform: translateX(-50%);
+                    }
+
                     .itemtime {
                         position: absolute;
                         left: 50%;
@@ -564,5 +570,4 @@ $siderFlexSize: 6%;
         opacity: 0.5;
         z-index: 1;
     }
-
 }
